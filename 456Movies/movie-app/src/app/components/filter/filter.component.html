@@ -1,0 +1,20 @@
+<form [formGroup]="checkboxGroupForm" class="movie-container">
+  <div class="btn-group" role="group">
+    <label class="btn-primary" ngbButtonLabel> 
+      <input type="checkbox" class="btn-check" formControlName="action"  (click)="onSelect('action')" ngbButton> Action 
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" class="btn-check" formControlName="adventure" (click)="onSelect('adventure')" ngbButton> Adventure
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" class="btn-check" formControlName="animation" (click)="onSelect('animation')" ngbButton> Animation
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" class="btn-check" formControlName="biography" (click)="onSelect('biography')" ngbButton> Biography
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+      <input type="checkbox" class="btn-check" formControlName="christmas" (click)="onSelect('drama')" ngbButton> Drama
+    </label>
+  </div>
+</form>
+<app-display-movies [parentData]="filteredMovies" [categoryClicked]="buttonClicked" ></app-display-movies>   
